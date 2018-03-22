@@ -1,0 +1,204 @@
+body
+{
+    background-color: rgb(169, 185, 216);
+}
+
+.left_list li
+{
+    border: none;
+    border-bottom:  1px solid rgb(71, 126, 226);
+    padding-bottom: 13px;
+
+}
+
+.left_list li:hover
+{
+    background: cornflowerblue;
+}
+
+
+.left
+{
+    width: 200px;
+    padding-left: 10px;
+}
+
+.middle
+{
+    top: 12%;
+    position: absolute;
+    left: 13%;
+    
+}
+
+.down
+{
+    top: 90%;
+    position: absolute;
+}
+
+#he
+{
+   position: fixed;
+   right: 0;
+   top:0.5;
+   left: 89%;
+}
+
+.right_list
+{
+    position: absolute;
+    top: 1px;
+    left: 67%;
+}
+
+
+.left_list ul
+{
+    width: 200px;
+    padding-left: 4px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.left_list a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.left_list a:hover
+{
+    color: white;
+}
+
+
+.right_list li
+{
+    display: inline;
+    padding: 10px;
+}
+
+.right_list a
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.right_list a:hover
+{
+    color: violet;
+}
+
+
+table
+{
+    border-collapse: collapse;
+    width: 95%;
+    height: 95%;
+}
+
+p
+{
+    width: 95%;
+}
+
+table,th,td
+{
+    border: 1px solid black;
+    height: 25px;;
+}
+
+#topc
+{
+    background-color: rgb(36, 77, 212);
+    color: black;
+}
+
+
+#text a
+{
+    font-size:20px;
+    font-weight: bold;
+    color: mediumorchid;
+    text-decoration: none;
+}
+
+.middle ul
+{
+   font-style: italic;
+}
+
+#frfox
+{
+    color: green;
+}
+
+#oth
+{
+    color: gray;
+}
+
+#ci
+{
+    color: red;
+}
+
+#cie
+{
+    color: red;
+}
+
+#cie li
+{
+    text-decoration:underline;
+}
+
+#ie8
+{
+    color: blue;
+
+}
+
+#ie10
+{
+    color: purple;
+}
+
+#ed
+{
+    color: yellow;
+}
+
+
+.down ul
+{
+    padding: 5px;
+    float: left;
+}
+
+.down li
+{
+    font-weight: bold;
+    display:inline;
+    border-left:1px solid black;
+    padding:0 5px 0 7px;
+}
+
+.down li:first-child
+{
+    border: none;
+}
+
+.down a
+{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.down a:hover
+{
+    color: orchid;
+}
