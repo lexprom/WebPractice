@@ -1,14 +1,17 @@
 body
 {
     background-color: rgb(169, 185, 216);
+    margin-left: auto;
+    width: 1000px;
+    margin-right: auto;
 }
 
 .left_list li
 {
     border: none;
     border-bottom:  1px solid rgb(71, 126, 226);
-    padding-bottom: 13px;
-
+    padding-bottom: 7px;
+    padding-top:5px;
 }
 
 .left_list li:hover
@@ -16,40 +19,25 @@ body
     background: cornflowerblue;
 }
 
-
 .left
 {
     width: 200px;
     padding-left: 10px;
+    float: left;
 }
 
 .middle
 {
-    top: 12%;
-    position: absolute;
-    left: 13%;
-    
+    width: 750px;
+    padding-left: 230px;
+    padding-top: 100px;
 }
 
-.down
-{
-    top: 90%;
-    position: absolute;
-}
-
-#he
-{
-   position: fixed;
-   right: 0;
-   top:0.5;
-   left: 89%;
-}
 
 .right_list
 {
-    position: absolute;
     top: 1px;
-    left: 67%;
+    float: right;
 }
 
 
@@ -75,7 +63,7 @@ body
 
 .right_list li
 {
-    display: inline;
+    display: inline-block;
     padding: 10px;
 }
 
@@ -95,14 +83,9 @@ body
 table
 {
     border-collapse: collapse;
-    width: 95%;
-    height: 95%;
+    width: 100%;
 }
 
-p
-{
-    width: 95%;
-}
 
 table,th,td
 {
@@ -171,11 +154,15 @@ table,th,td
     color: yellow;
 }
 
+#he
+{
+  float: right;
+
+}
 
 .down ul
 {
     padding: 5px;
-    float: left;
 }
 
 .down li
