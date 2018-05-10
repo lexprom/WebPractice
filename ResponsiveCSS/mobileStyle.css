@@ -1,4 +1,20 @@
-@media only screen and (max-width: 320px)/*phone ver.*/ {
+@media only screen and (min-width: 320px) and  (max-width: 425px)
+{/*phone ver.*/ 
+
+    .sign
+    {
+        margin-top: 35px;
+    }
+
+    #listLists
+    {
+        display: none;
+    }
+    
+    .top > p
+    {
+        display: none;
+    }
 
     body 
     {
@@ -6,7 +22,7 @@
     }
     .top
     {
-        background: royalblue;
+        background: #034f84;
         position: relative;
         height: 35px;
         width: 320px;
@@ -22,6 +38,10 @@
         padding-top: 4px;
         box-sizing: border-box;
     }
+    #cat
+    {
+        display: none;
+    }
     #rings
     {
         margin-top: 5px;
@@ -33,7 +53,7 @@
     #button1
     {
         position: relative;
-        margin-top: -30px;
+        margin-top: -55px;
         margin-right: 7px;
         box-sizing: border-box;
         float: right;
@@ -94,6 +114,11 @@
         box-sizing: border-box;
     }
 
+    .mid > p >img 
+    {
+        width:310px;
+    }
+
     #search
     {
        position: relative;
@@ -134,45 +159,4 @@
         text-decoration: none;
         box-sizing: border-box;
     }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {/*tablet ver.*/ 
-  /*
-    body
-    {
-        margin-top: 0px;
-    }
-    .top
-    {
-        background: royalblue;
-        position: relative;
-        height: 35px;
-        width: 100%;
-        margin-bottom: 5px;
-        margin-left: -8px;
-        box-sizing: border-box;
-    }
-    .top>h1
-    {
-        color: white;
-        font-size: 20px;
-        margin-top: 0px;
-        padding-top: 4px;
-        box-sizing: border-box;
-    }
-    
-    #button1 
-    {
-        display: none;
-    }
-
-    .top img
-    {  
-        margin-left: 25px;
-        margin-top: 7px;
-        width: 74px;
-        height: 20px;
-        float:  left;
-
-    }*/
 }
