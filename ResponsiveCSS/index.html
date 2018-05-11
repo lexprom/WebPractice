@@ -2,81 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
-    <link rel="stylesheet" href="mobileStyle.css">
-    <link rel="stylesheet" href="tabletStyle.css">
-    <link rel="stylesheet" href="desktopStyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/versions.css">
 </head>
 <body>
-    <div class="head">
-        <div class="top">
-                <img id="rings" src="img/brand-white.png" alt="" width="59px" height="17px">
-                <h1>Header</h1>
-                <li id="listLists">
-                        <ul>Link 1</ul>
-                        <ul>Link 2</ul>
-                        <ul>Link 3</ul>
-                        <ul>Link 4</ul>
-                </li>
-                <input id="search" type="text" placeholder="Search">
-            <button id="button1">Button</button>
-            <p><img id="cat" src="img/lirikN.jpg" alt="">User Name</p>
-        </div>
-       
+<header class="header">
+
+    <div class="header-elem">
+        <img src="images/brand-white.png" class="logo-img-size">
     </div>
 
-    <div class="sign">
-        <h2>Sign in</h2>
-        <form action="kek" method="post">
-            <input type="text" placeholder="Login">
-            <input type="text" placeholder="Password">
-            <br>
-            <input type="checkbox" name="" id="remember">Remember me
-            <button id="button2" type="submit">Sign in</button>
+    <div class="header-elem">
+        <h1 class="header-text">Header</h1>
+    </div>
+
+    <button type="submit" class="header-but-size">Search</button>
+
+    <!--tablet version elem-->
+    <div class="header-links">
+        <ul>
+            <li class="link"><a href="#" target="_blank" class="link-text">Link1</a></li>
+            <li class="link"><a href="#" target="_blank" class="link-text">Link2</a></li>
+            <li class="link"><a href="#" target="_blank" class="link-text">Link3</a></li>
+            <li class="link"><a href="#" target="_blank" class="link-text">Link4</a></li>
+        </ul>
+    </div>
+
+    <div class="header-elem user-name-div">
+        <p class="user-name">User name</p>
+    </div>
+
+    <div class="header-elem header-img">
+        <img src="images/lirikN.jpg" class="header-avatar">
+    </div>
+
+    <div class="header-elem search-but">
+        <button type="submit" class="header-but">Search</button>
+    </div>
+
+    <div class="header-elem search-input">
+        <form method="post" action="#" target="_blank">
+            <input placeholder="Search" class="tablet-search box">
         </form>
     </div>
 
-    <div class="aside-menu">
-          <div class="title">Aside header</div>
-          <div class="nav-container text-center">
-            <ul class="nav">
-              <li class="nav-item"><a href="">Link 1</a></li>
-              <li class="nav-item"><a href="">Link 2</a></li>
-              <li class="nav-item"><a href="">Link 3</a></li>
-              <li class="nav-item"><a href="">Link 4</a></li>
+</header>
+
+<div class="main-content-div">
+
+    <div>
+        <form method="post" action="#" target="_blank">
+            <input placeholder="Search" class="search-input-size search-input-position search-input-view box">
+        </form>
+    </div>
+
+    <div class="menu desktop-place box">
+        <header class="menu-header">
+            <h3 class="aside-header">Aside header</h3>
+        </header>
+        <div class="links">
+            <ul class="aside-header-links">
+                <li><a href="#" target="_blank" class="link-text left-link">Link 1</a></li>
+                <li><a href="#" target="_blank" class="link-text left-link">Link 2</a></li>
+                <li><a href="#" target="_blank" class="link-text left-link">Link 3</a></li>
+                <li><a href="#" target="_blank" class="link-text left-link">Link 4</a></li>
+                <li><a href="#" target="_blank" class="link-text left-link">Link 5</a></li>
             </ul>
-          </div>
         </div>
-
-    <div class="gallery">
-        <center><h2>Gallery</h2></center>
-        <img src="img/1.jpg" alt="woman)">
-        <img src="img/2.jpg" alt="another woman))">
-        <img src="img/3.jpg" alt="farmer">
     </div>
 
-    <div class="mid">
-        <p id="h1">Header for arctcle</p><br><p>
-            <img src="img/o-cat.jpg" alt="fun">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fuga ut modi maiores enim necessitatibus eligendi magnam aut perspiciatis porro numquam. Reprehenderit, unde. Odio, esse pariatur enim temporibus optio velit.</p>
-        <p id="h1">Header for arctcle</p><br><p>
-            <img src="img/my-ginger-cat.jpg" alt="cats">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fuga ut modi maiores enim necessitatibus eligendi magnam aut perspiciatis porro numquam. Reprehenderit, unde. Odio, esse pariatur enim temporibus optio velit.</p>
+    <div class="sign-in-div-position sign-in-div-size desktop-place box">
+        <h2 class="sing-in-logo">Sing in</h2>
+        <form action="#" method="post" target="_blank" class="sign-in-form">
+            <div><input placeholder="Login" class="login-input-place credentials"></div>
+            <div><input placeholder="Password" type="password" class="password-input-place credentials"></div>
+            <div>
+                <input type="checkbox" class="remember-me" id="remember-me-checkbox">
+                <label for="remember-me-checkbox">
+                    Remember me
+                </label>
+            </div>
+            <div>
+                <button type="submit" class="sign-in-but">Sign in</button>
+            </div>
+            <div content="" class="blocker"></div>
+        </form>
     </div>
 
-    <div class="down">
-        <ul>
-            <li><img src="img/node-sass.png" alt="">
-            <p><a href="">Button</a></p></li>
-            <li><img  src="img/node-sass.png" alt="">
-            <p><a href="">Button</a></p></li>
-            <li><img src="img/node-sass.png" alt="">
-            <p><a href="">Button</a></p></li>
-            <li><img src="img/node-sass.png" alt="">
-            <p><a href="">Button</a></p></li>
+
+    <div class="gallery desktop-place box">
+        <p class="gallery-logo">Gallery</p>
+        <img src="images/1.jpg" class="gallery-img">
+        <img src="images/2.jpg" class="gallery-img">
+        <img src="images/3.jpg" class="gallery-img">
+    </div>
+
+
+</div>
+<div class="blocker"></div>
+
+<!--first box-->
+<div class="post-div box">
+    <img src="images/o-cat.jpg" class="post-img"> <!--post-elem"-->
+    <h2 class="article-header">Header for article</h2>
+    <p class="post-text"> Lorem ipsum dolor sit amet, cibo doming inimicus eu eum, usu erroribus adversarium in. His et
+        purto veniam omittantur, sed tractatos aliquando no, nec cu impetus ocurreret urbanitas.
+        Clita platonem et pri, in vis elitr graecis rationibus. Te mea pertinacia consectetuer, est an rebum tibique
+        denique. Probo mentitum democritum quo ad. Ne vis putent nemore aperiam.
+        Duo at oratio denique, ne accusam posidonium vim, legere lucilius complectitur nec ad. Sit agam ignota assentior
+        no. Quem maiorum fabellas cu vim, id erat commune neglegentur pro.
+        Ne aeque dolores percipit pri. Laudem facilisi mel ea, ipsum putant melius qui ea, his possim virtute laboramus
+        te. Ne graeco nonumes interesset duo. Duo ne tritani oportere recteque, labore oportere his ex.
+    </p>
+</div>
+
+<!--second box-->
+<div class="post-div box">
+    <img src="images/my-ginger-cat.jpg" class="post-img post-elem">
+    <h2 class="article-header post-elem">Header for article</h2>
+    <p class="post-text"> Lorem ipsum dolor sit amet, cibo doming inimicus eu eum, usu erroribus adversarium in. His et
+        purto veniam omittantur, sed tractatos aliquando no, nec cu impetus ocurreret urbanitas.
+        Clita platonem et pri, in vis elitr graecis rationibus. Te mea pertinacia consectetuer, est an rebum tibique
+        denique. Probo mentitum democritum quo ad. Ne vis putent nemore aperiam.
+        Duo at oratio denique, ne accusam posidonium vim, legere lucilius complectitur nec ad. Sit agam ignota assentior
+        no. Quem maiorum fabellas cu vim, id erat commune neglegentur pro.
+        Ne aeque dolores percipit pri. Laudem facilisi mel ea, ipsum putant melius qui ea, his possim virtute laboramus
+        te. Ne graeco nonumes interesset duo. Duo ne tritani oportere recteque, labore oportere his ex.
+    </p>
+</div>
+
+<div class="blocker"></div>
+
+<footer>
+    <div class="foot-div">
+        <ul class="footer-ul">
+            <li class="footer-elem">
+                <a href="#" target="_blank" class="footer-text"><img src="images/node-sass.png" class="sass">
+                    <p>Button</p>
+                </a>
+            </li>
+            <li class="footer-elem">
+                <a href="#" target="_blank" class="footer-text"><img src="images/node-sass.png" class="sass">
+                    <p>Button</p>
+                </a>
+            </li>
+            <li class="footer-elem">
+                <a href="#" target="_blank" class="footer-text"><img src="images/node-sass.png" class="sass">
+                    <p>Button</p>
+                </a>
+            </li>
+            <li class="footer-elem">
+                <a href="#" target="_blank" class="footer-text"><img src="images/node-sass.png" class="sass">
+                    <p>Button</p>
+                </a>
+            </li>
+            <li class="footer-elem">
+                <a href="#" target="_blank" class="footer-text"><img src="images/node-sass.png" class="sass">
+                    <p>Button</p>
+                </a>
+            </li>
         </ul>
     </div>
-    
+</footer>
 </body>
 </html>
