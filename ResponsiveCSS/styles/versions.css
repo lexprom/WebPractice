@@ -196,9 +196,8 @@
     }
 
     .post-div {
-        width:45%;
-        margin-top: auto;
+        width:49%;
         display: inline-block;
-        margin-left:auto;
+        margin-left: 17px;
     }
 }
