@@ -1,15 +1,18 @@
-//task1
 "use strict"
+//task1
 function count()
 {
     var text = document.getElementById("countText").value;
     var regex = /\d+\.\d+|[+*/-]|\d+/gim;
 
-    var arrMatch = text.match(regex); // array filled matches
+    if(text.match(/=/g).length > 1)
+    {
+      alert('Too much "="');
+      throw 'Too much "="';
+    }
+
+    var arrMatch = text.substring(0,text.indexOf('=')).match(regex); // array filled matches
     var res = +arrMatch[0];
-    console.table(arrMatch);
-
-
     arrMatch.forEach((element,i,arrMatch) => {
         switch(element)
         {
@@ -20,7 +23,7 @@ function count()
             case "=": break;
         }
     });
-    alert(res);
+    alert(res.toFixed(2));
 }
 
 //task2
@@ -52,7 +55,6 @@ function deleteRepeats()
 }
 
 //task3
-
 function DateParse()
 {
   var year = document.getElementById('year').value;
@@ -64,11 +66,11 @@ function DateParse()
   var mask = document.getElementById('mask').value;
   
 
-  //var date = new Date(year,month,day,hour,minute,second);
-  //console.log(month);
-
   const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
+
+  const monthNamesShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", 
+  "Aug", "Sep", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
   var masks =
@@ -76,7 +78,7 @@ function DateParse()
     yyyy : year,
     yy : year.substring(year.length/2,year.length),
     MMMM : monthNames[new Date(year,month,day).getMonth()] ,
-    MMM : new Date(year,month,day).toString().split(' ')[1],
+    MMM : monthNamesShort[new Date(year,month,day).getMonth()],
     MM : month,
     M : month[1],
     dd : day,
@@ -93,17 +95,6 @@ function DateParse()
 
   var res = mask;
 
-  if(res.indexOf("MMMM")!=-1 || res.indexOf("MMM")!=-1) 
-    {
-    res = res.replace(/MMMM/g, masks.MMMM);
-    res = res.replace(/MMM/g, masks.MMM);
-    }
-  if(res.indexOf("MM")!=-1 || res.indexOf("M")!=-1) 
-    {
-      res = res.replace(/MM/g,masks.MM);
-      res = res.replace(/M[\s\W]/g, masks.M);
-    }
-
   res = res.replace(/yyyy/g,masks.yyyy);
   res = res.replace(/yy/g,masks.yy);
   res = res.replace(/dd/g,masks.dd);
@@ -112,9 +103,11 @@ function DateParse()
   res = res.replace(/H/g,masks.H);
   res = res.replace(/hh/g,masks.hh);
   res = res.replace(/h/g,masks.h);
-  res= res.replace(/mm/g,masks.mm);
-  res= res.replace(/m/g,masks.m);
+  res = res.replace(/mm/g,masks.mm);
+  res = res.replace(/m/g,masks.m);
   res = res.replace(/ss/g,masks.ss);
   res = res.replace(/s/g,masks.s);
+  res = res.replace(/MMMM/g, masks.MMMM).replace(/MMM/g, masks.MMM).replace(/MM/g,masks.MM).replace(/\bM\b/g, masks.M);
+  
   alert(res);
 }
