@@ -3,8 +3,13 @@
 function count()
 {
     var text = document.getElementById("countText").value;
+    if(document.getElementById('countText').value == '')
+    {
+      document.getElementById('resCount').value = 'Empty input';
+    }
+    else
+    {
     var regex = /\d+\.\d+|[+*/-]|\d+/gim;
-
 
     if(text.match(/=/g) != null && text.match(/=/g).length == 1)
     {
@@ -12,14 +17,13 @@ function count()
     }
     else if(text.match(/=/g) == null)
     {
-      var arrMatch = text.match(regex);
+      var arrMatch = text.match(regex); // array filled matches
     }
     else
     {
       document.getElementById('resCount').value = 'Too much "="';
     }
-    
-    
+
     var res = +arrMatch[0];
     arrMatch.forEach((element,i,arrMatch) => {
         switch(element)
@@ -31,7 +35,8 @@ function count()
             case "=": break;
         }
     });
-    document.getElementById('resCount').value = res.toFixed(2).toString();
+    document.getElementById('resCount').value = res.toFixed(2);
+  }
 }
 
 //task2
@@ -50,13 +55,6 @@ function deleteRepeats()
   console.table(arrMatch);
   var firstWord;
   var result = text;
-
-  for (let index = 0; index < arrMatch.length; index++) {
-    if(arrMatch[index].match('$') || arrMatch[index].match('*'))
-    {
-      arrMatch[index] = arrMatch[index].replace('$','/$')
-    }
-  }
 
   if(arrMatch == null) { alert(result); }
   firstWord = arrMatch[0];
